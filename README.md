@@ -14,4 +14,4 @@ The schematic has all items listed and values and should be easily sourced.  Add
 I plan on trying to implement both Arduino and possibly Micropython on this board, but need some significant help with this.  I will update as I can.
 
 ## License
-TBD - 
+For personal use only - do not sell.  You may modify as you wish.
