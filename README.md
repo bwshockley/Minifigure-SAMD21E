@@ -9,6 +9,8 @@ Board 1: Stand alone - haven't tested, but should soon. [OSHPark](https://oshpar
 
 Board 2: This does not have a native USB or programming port - I am developing a backpack for it.  Will share backpack. [OSHPark](https://oshpark.com/shared_projects/W2bUXtFr)
 
+MINI SAM TQFP SIMPLE - This version is more friendly to hand soldering with a TQFP SAMD21E chip.  USB protection and filtering removed, reset debounce removed.  [OSHPARK](https://oshpark.com/shared_projects/yFTXsDW0)
+
 ## Etc
 I have not yet tested the design.  As it sits, it should pass DRC for OSHPark manufacture with two major unknowns.  1) Wether or not the cutouts for the hands will be manufactured as intended and 2) The exact outline of the board - there may be some corners, nooks, and crannies that are not manufactured by OSHPark and will require additional filing/work by me.  I will update once I get a set manufactured.
 
