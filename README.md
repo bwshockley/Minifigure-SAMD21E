@@ -13,7 +13,7 @@ MINI SAM TQFP SIMPLE - This version is more friendly to hand soldering with a TQ
 
 MINI SAM TQFP 1.27 SIMPLE - This version retains the TQFP SAMD21E chip, but on the back instead of the tiny 8-pin connector - I've replaced it with a 1.27mm pitch SMT connector.  Still trying to retain a "backpack" idea for add-on boards.  [OSHPARK](https://oshpark.com/shared_projects/vt6FGicv)
 
-MINI SAM TQFP 2.54 BB (BreadBoard or Protoboard) - This version changes the rear once more to a 2.54mm pitch SMT setup for a protoboard friendly design.
+MINI SAM TQFP 2.54 BB (BreadBoard or Protoboard) - This version changes the rear once more to a 2.54mm pitch SMT setup for a protoboard friendly design. [OSHPARK](https://oshpark.com/shared_projects/SMD5UkUu)
 
 ## Etc
 I have not yet tested the design.  As it sits, it should pass DRC for OSHPark manufacture with two major unknowns.  1) Wether or not the cutouts for the hands will be manufactured as intended and 2) The exact outline of the board - there may be some corners, nooks, and crannies that are not manufactured by OSHPark and will require additional filing/work by me.  I will update once I get a set manufactured.
