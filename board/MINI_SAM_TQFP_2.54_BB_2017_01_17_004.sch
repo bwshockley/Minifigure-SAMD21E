@@ -3003,7 +3003,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J2" library="SparkFun-Connectors" deviceset="CORTEX_DEBUG" device="PTH"/>
 <part name="JP4" library="pinhead+" deviceset="PINHD-1X11" device="1X11_SMT"/>
 <part name="JP3" library="pinhead+" deviceset="PINHD-1X11" device="1X11_SMT"/>
-<part name="LED" library="microbuilder" deviceset="LED" device="0603_NOOUTLINE" value="APT2012LSECK/J3-PRV"/>
+<part name="LED" library="microbuilder" deviceset="LED" device="0805_NOOUTLINE" value="APT2012LSECK/J3-PRV"/>
 <part name="GND14" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="IC1" library="Shockley_Custom" deviceset="MCP1700" device=""/>
 <part name="GND15" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
