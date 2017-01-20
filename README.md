@@ -15,11 +15,13 @@ MINI SAM TQFP 1.27 SIMPLE - This version retains the TQFP SAMD21E chip, but on t
 
 MINI SAM TQFP 2.54 BB (BreadBoard or Protoboard) - This version changes the rear once more to a 2.54mm pitch SMT setup for a protoboard friendly design. [OSHPARK](https://oshpark.com/shared_projects/SMD5UkUu)
 
+Mini SAM - Protoboard - TQFP - 2017-01-17-00 - This version is similar to the other BB version, but has some refinements to layout and includes options for the onboard LED (Basic LED or the WS2812B), a plain button, and other enhancements.  [OSHPARK](https://oshpark.com/shareD_projects/6L6FRf1s)
+
 ## Etc
 I have not yet tested the design.  As it sits, it should pass DRC for OSHPark manufacture with two major unknowns.  1) Wether or not the cutouts for the hands will be manufactured as intended and 2) The exact outline of the board - there may be some corners, nooks, and crannies that are not manufactured by OSHPark and will require additional filing/work by me.  I will update once I get a set manufactured.
 
 ## BOM
-*The BOM listed at mouser is out of date - please note I will update the BOM for the boards soon.  I'm leaving it here so you have a starting point.*
+*The BOM listed at mouser is for the Mini SAM - Protoboard - TQFP - 2017-01-17-004 board.  It is a good place to start, but keep in mind you may want to change or leave out items you don't want.*
 
 The schematic has all items listed and values and should be easily sourced.  Additionally, I have setup a [project on mouser.com that can be found here.](http://www.mouser.com/ProjectManager/ProjectDetail.aspx?AccessID=328cc4307e)  The BOM through mouser is roughly 12 USD at this time (Oct 2016).  It does not include the WS8212B 3535 LED - these can be sourced from [Adafruit](https://www.adafruit.com/products/2659) or eBay among others.  The LED does not need to be populated for the board to function, but it is fun.
 
@@ -27,6 +29,8 @@ The schematic has all items listed and values and should be easily sourced.  Add
 I plan on trying to implement both Arduino and possibly Micropython on this board, but need some significant help with this.  I will update as I can.
 
 In order to test my prototype board, I loaded the Arduino Zero bootloader, but changes the PortA pin 14 for PostA Pin 27.  Nothing else is fucntional yet - it was a bad hack to get access to the WS2812 LED for the time being and to prove to myself the board will work in theory.
+
+(01-20-2017) FIRMWARE has been updated and almost complete.  I'm working through the last bit of verification and validation now.  Will post asap.
 
 ## License
 For personal use only - do not sell.  You may modify as you wish.
