@@ -15,7 +15,7 @@ MINI SAM TQFP 1.27 SIMPLE - This version retains the TQFP SAMD21E chip, but on t
 
 MINI SAM TQFP 2.54 BB (BreadBoard or Protoboard) - This version changes the rear once more to a 2.54mm pitch SMT setup for a protoboard friendly design. [OSHPARK](https://oshpark.com/shared_projects/SMD5UkUu)
 
-Mini SAM - Protoboard - TQFP - 2017-01-17-00 - This version is similar to the other BB version, but has some refinements to layout and includes options for the onboard LED (Basic LED or the WS2812B), a plain button, and other enhancements.  [OSHPARK](https://oshpark.com/shareD_projects/6L6FRf1s)
+Mini SAM - Protoboard - TQFP - 2017-01-17-00 - This version is similar to the other BB version, but has some refinements to layout and includes options for the onboard LED (Basic LED or the WS2812B), a plain button, and other enhancements.  [OSHPARK](https://oshpark.com/shared_projects/IhRoccbe)
 
 ## Etc
 I have not yet tested the design.  As it sits, it should pass DRC for OSHPark manufacture with two major unknowns.  1) Wether or not the cutouts for the hands will be manufactured as intended and 2) The exact outline of the board - there may be some corners, nooks, and crannies that are not manufactured by OSHPark and will require additional filing/work by me.  I will update once I get a set manufactured.
