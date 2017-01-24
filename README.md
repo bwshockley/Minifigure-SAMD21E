@@ -33,4 +33,4 @@ In order to test my prototype board, I loaded the Arduino Zero bootloader, but c
 (01-20-2017) FIRMWARE has been updated and almost complete.  I'm working through the last bit of verification and validation now.  Will post asap.
 
 ## License
-For personal use only - do not sell.  You may modify as you wish.
+CC BY SA 4.0
