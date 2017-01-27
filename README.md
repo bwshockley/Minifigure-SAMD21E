@@ -17,8 +17,13 @@ MINI SAM TQFP 2.54 BB (BreadBoard or Protoboard) - This version changes the rear
 
 Mini SAM - Protoboard - TQFP - 2017-01-17-00 - This version is similar to the other BB version, but has some refinements to layout and includes options for the onboard LED (Basic LED or the WS2812B), a plain button, and other enhancements.  [OSHPARK](https://oshpark.com/shared_projects/IhRoccbe)
 
+Mini SAM 2017/01-001 - Latest version with minor changes and enhancements.  Once this version passes validation and verification, I will most likely archive other versions.  Details on [OSHPARK](https://oshpark.com/shared_projects/dv4tvRPH) and [here](https://github.com/bwshockley/Minifigure-SAMD21E/tree/master/board/2017/01).
+
+----------------------------------
+
+
 ## Etc
-I have not yet tested the design.  As it sits, it should pass DRC for OSHPark manufacture with two major unknowns.  1) Wether or not the cutouts for the hands will be manufactured as intended and 2) The exact outline of the board - there may be some corners, nooks, and crannies that are not manufactured by OSHPark and will require additional filing/work by me.  I will update once I get a set manufactured.
+The board passes all DRC for OSHPark manufacturing and should pass for most other manufacturers as well - I kept most routes, vias, etc larger than minimums and allowed plenty of space where I could.  I have tested many of these boards and all features work as designed.
 
 ## BOM
 *The BOM listed at mouser is for the Mini SAM - Protoboard - TQFP - 2017-01-17-004 board.  It is a good place to start, but keep in mind you may want to change or leave out items you don't want.*
@@ -30,7 +35,7 @@ I plan on trying to implement both Arduino and possibly Micropython on this boar
 
 In order to test my prototype board, I loaded the Arduino Zero bootloader, but changes the PortA pin 14 for PostA Pin 27.  Nothing else is fucntional yet - it was a bad hack to get access to the WS2812 LED for the time being and to prove to myself the board will work in theory.
 
-(01-20-2017) FIRMWARE has been updated and almost complete.  I'm working through the last bit of verification and validation now.  Will post asap.
+(01-20-2017) FIRMWARE has been updated and almost complete.  I'm working through the last bit of verification and validation now.  Firmware and Arduino files are available in the arduino folder.  In order to burn the bootloader, the Atmel SAM-BA In-System Programmer must be installed first.
 
 ## License
 Hardware - CC BY SA 4.0 - See License file.
