@@ -82,9 +82,9 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 /* LEDs
- * The LED is connected to PIN 14.
+ * The LED is connected to PIN 15.
  */
-#define PIN_LED_13           (14u)
+#define PIN_LED_13           (15u)
 #define PIN_LED              PIN_LED_13
 #define LED_BUILTIN          PIN_LED_13
 
