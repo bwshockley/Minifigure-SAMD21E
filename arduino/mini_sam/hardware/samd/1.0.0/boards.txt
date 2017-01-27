@@ -1,0 +1,43 @@
+# Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
+#
+# This library is free software; you can redistribute it and/or
+# modify it under the terms of the GNU Lesser General Public
+# License as published by the Free Software Foundation; either
+# version 2.1 of the License, or (at your option) any later version.
+#
+# This library is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# See the GNU Lesser General Public License for more details.
+#
+# You should have received a copy of the GNU Lesser General Public
+# License along with this library; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+
+# Mini SAM - SAMD21E18A Board (Native USB Port)
+mini_sam.name=Mini SAM
+mini_sam.vid.0=0x1209
+mini_sam.pid.0=0x2017
+mini_sam.vid.1=0x1209
+mini_sam.pid.1=0x2017
+mini_sam.upload.tool=arduino:bossac
+mini_sam.upload.protocol=sam-ba
+mini_sam.upload.maximum_size=262144
+mini_sam.upload.use_1200bps_touch=true
+mini_sam.upload.wait_for_upload_port=true
+mini_sam.upload.native_usb=true
+mini_sam.build.mcu=cortex-m0plus
+mini_sam.build.f_cpu=48000000L
+mini_sam.build.usb_product="Mini SAM"
+mini_sam.build.usb_manufacturer="Benjamin Shockley"
+mini_sam.build.board=SAMD_MINI_SAM
+mini_sam.build.core=arduino:arduino
+mini_sam.build.extra_flags=-D__SAMD21E18A__ {build.usb_flags}
+mini_sam.build.ldscript=linker_scripts/gcc/flash_with_bootloader.ld
+mini_sam.build.openocdscript=openocd_scripts/samd21e18a.cfg
+mini_sam.build.variant=mini_sam
+mini_sam.build.variant_system_lib=
+mini_sam.build.vid=0x1209
+mini_sam.build.pid=0x2017
+mini_sam.bootloader.tool=openocd
+mini_sam.bootloader.file=zero/binaries/sam_m0p_sam_ba_SAMD21E18A.bin
