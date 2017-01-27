@@ -2,7 +2,7 @@
 
 This is a LEGO Minifigure sized development board using an Atmel SAMD21E 32-Bit ARM chip. I basically followed the recommended layout/setup from the SAMD21 spec sheets.
 
-Included on Mini SAM is a WS2812B LED (STATUS) connected to PIN 27, a 0603 LED (L) connected to PIN 14, a reset button (SW1) with circuitry per datasheet connected to !RESET, and a user programmable button (SW1) that is active HIGH connected to PIN 28. The 0603 LED is connected in series with a 1Kohm resistor, part of R1, and care should be taken when selecting an 0603 LED such that at a supply of 3.3V, no more than 5mA is required.
+Included on Mini SAM is a WS2812B LED (STATUS) connected to PIN 27, a 0603 LED (L) connected to PIN 15, a reset button (SW1) with circuitry per datasheet connected to !RESET, and a user programmable button (SW1) that is active HIGH connected to PIN 28. The 0603 LED is connected in series with a 1Kohm resistor, part of R1, and care should be taken when selecting an 0603 LED such that at a supply of 3.3V, no more than 5mA is required.
 
 Programming port (PROG) is a basic 10-pin SWD for ARM based processors, which is a 2x5 1.27mm pitch connector. The SWD line is pulled up with a 1Kohm resistor, part of R1.
 
