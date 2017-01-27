@@ -40,4 +40,4 @@ mini_sam.build.variant_system_lib=
 mini_sam.build.vid=0x1209
 mini_sam.build.pid=0x2017
 mini_sam.bootloader.tool=openocd
-mini_sam.bootloader.file=zero/binaries/sam_m0p_sam_ba_SAMD21E18A.bin
+mini_sam.bootloader.file=mini_sam/samd21_sam_ba_mini_sam.bin
