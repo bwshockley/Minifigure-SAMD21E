@@ -1,4 +1,4 @@
-##Board 2017/01-001
+##Board 2017/01-002
 
 This is a LEGO Minifigure sized development board using an Atmel SAMD21E 32-Bit ARM chip. I basically followed the recommended layout/setup from the SAMD21 spec sheets.
 
