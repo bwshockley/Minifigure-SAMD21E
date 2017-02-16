@@ -90,7 +90,9 @@ extern "C"
 
 /* Buttons
  * Reset Button is not connected to Arduino Pins
+ * Builtin Button is connected to Pin 28
  */
+#define BUTTON_BUILTIN       (28u)
 
 
 /*
@@ -202,8 +204,6 @@ extern SERCOM sercom0;
 extern SERCOM sercom1;
 extern SERCOM sercom2;
 extern SERCOM sercom3;
-extern SERCOM sercom4;
-extern SERCOM sercom5;
 
 extern Uart Serial1;
 
