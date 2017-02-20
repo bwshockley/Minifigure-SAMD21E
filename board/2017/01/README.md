@@ -53,3 +53,6 @@ Arduino FIRMWARE/BOOTLOADER is complete, but I'm still testing all functions.  S
 Please check my Github for the latest design files and bootloade/firmware.
 
 More details can be found on [Github](https://github.com/bwshockley/Minifigure-SAMD21E)
+
+##Board 2017/01-012
+Same as 2017/01-010 with minor cosmetic changes.
