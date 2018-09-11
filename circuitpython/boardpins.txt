@@ -1,0 +1,38 @@
+PIN     mini_sam_m0
+PA00		
+PA01		
+PA02    ~A0
+PA03									
+PB08	
+PB09
+PA04    ~A3
+PA05    ~A4
+PA06    ~A1
+PA07    ~A2
+PA08    ~A5
+PA09    A6
+PA10    D1 / TX
+PA11    D0 / RX
+PB10
+PB11	
+PA12	
+PA13	
+PA14    D14
+PA15    LED / D15
+PA16    MOSI
+PA17    SCK
+PA18    SS / D18
+PA19    MISO
+PA20		
+PA21		
+PA22    SDA
+PA23    SCL
+PA24									
+PA25									
+PB22						
+PB23							
+PA27    NEOPIXEL / D27
+PA28    BUTTON / D28
+PA29									
+PA30
+PA31
