@@ -142,8 +142,6 @@ SERCOM sercom0( SERCOM0 ) ;
 SERCOM sercom1( SERCOM1 ) ;
 SERCOM sercom2( SERCOM2 ) ;
 SERCOM sercom3( SERCOM3 ) ;
-SERCOM sercom4( SERCOM4 ) ;
-SERCOM sercom5( SERCOM5 ) ;
 
 Uart Serial( &sercom0, PIN_SERIAL_RX, PIN_SERIAL_TX, PAD_SERIAL_RX, PAD_SERIAL_TX ) ;
 
