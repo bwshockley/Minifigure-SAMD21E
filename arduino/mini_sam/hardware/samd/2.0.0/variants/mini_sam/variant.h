@@ -1,16 +1,13 @@
 /*
   Copyright (c) 2014-2015 Arduino LLC.  All right reserved.
-
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
   version 2.1 of the License, or (at your option) any later version.
-
   This library is distributed in the hope that it will be useful,
   but WITHOUT ANY WARRANTY; without even the implied warranty of
   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
   See the GNU Lesser General Public License for more details.
-
   You should have received a copy of the GNU Lesser General Public
   License along with this library; if not, write to the Free Software
   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
@@ -25,18 +22,15 @@
 #define _VARIANT_MINI_SAM
 
 
-// The definitions here needs a SAMD core >=1.6.10
-#define ARDUINO_SAMD_VARIANT_COMPLIANCE 10610
-
 /*----------------------------------------------------------------------------
  *        Definitions
  *----------------------------------------------------------------------------*/
 
 /** Frequency of the board main oscillator */
-#define VARIANT_MAINOSC     (32768ul)
+#define VARIANT_MAINOSC		(32768ul)
 
 /** Master clock frequency */
-#define VARIANT_MCK           (48000000ul)
+#define VARIANT_MCK			  (48000000ul)
 
 /*----------------------------------------------------------------------------
  *        Headers
@@ -65,8 +59,8 @@ extern "C"
 #define NUM_DIGITAL_PINS     (32u)
 #define NUM_ANALOG_INPUTS    (10u)
 #define NUM_ANALOG_OUTPUTS   (1u)
-
 #define analogInputToDigitalPin(p)  (p)
+
 #define digitalPinToPort(P)        ( &(PORT->Group[g_APinDescription[P].ulPort]) )
 #define digitalPinToBitMask(P)     ( 1 << g_APinDescription[P].ulPin )
 //#define analogInPinToBit(P)        ( )
@@ -85,7 +79,7 @@ extern "C"
 // #define digitalPinToTimer(P)
 
 /* LEDs
- * The LED is connected to PIN 14.
+ * The LED is connected to PIN 15.
  */
 #define PIN_LED_13           (15u)
 #define PIN_LED              PIN_LED_13
@@ -93,7 +87,9 @@ extern "C"
 
 /* Buttons
  * Reset Button is not connected to Arduino Pins
+ * Builtin Button is connected to Pin 28
  */
+#define BUTTON_BUILTIN       (28u)
 
 
 /*
@@ -139,10 +135,10 @@ static const uint8_t DAC0 = PIN_DAC0;
  * Serial interfaces
  */
 // Serial
-#define PIN_SERIAL_RX       (11ul)
-#define PIN_SERIAL_TX       (10ul)
-#define PAD_SERIAL_TX       (UART_TX_PAD_2)
-#define PAD_SERIAL_RX       (SERCOM_RX_PAD_3)
+#define PIN_SERIAL1_RX       (11ul)
+#define PIN_SERIAL1_TX       (10ul)
+#define PAD_SERIAL1_TX       (UART_TX_PAD_2)
+#define PAD_SERIAL1_RX       (SERCOM_RX_PAD_3)
 
 
 /*
@@ -183,7 +179,8 @@ static const uint8_t SCL = PIN_WIRE_SCL;
  */
 #define PIN_USB_DM                      (24ul)
 #define PIN_USB_DP                      (25ul)
-
+#define PIN_USB_HOST_ENABLE             (14ul)
+#define PIN_USB_HOST_ENABLE_VALUE	HIGH
 
 #ifdef __cplusplus
 }
@@ -204,12 +201,8 @@ extern SERCOM sercom0;
 extern SERCOM sercom1;
 extern SERCOM sercom2;
 extern SERCOM sercom3;
-extern SERCOM sercom4;
-extern SERCOM sercom5;
 
-
-extern Uart Serial;
-// extern Uart Serial1;
+extern Uart Serial1;
 
 #endif
 
@@ -229,15 +222,21 @@ extern Uart Serial;
 // SERIAL_PORT_HARDWARE_OPEN  Hardware serial ports which are open for use.  Their RX & TX
 //                            pins are NOT connected to anything by default.
 #define SERIAL_PORT_USBVIRTUAL      SerialUSB
-// #define SERIAL_PORT_MONITOR         Serial
-// // Serial has no physical pins broken out, so it's not listed as HARDWARE port
-// #define SERIAL_PORT_HARDWARE        Serial1
-// #define SERIAL_PORT_HARDWARE_OPEN   Serial1
+// SERIAL_PORT_MONITOR seems to be used only by the USB Host library (as of 1.6.5).
+// It normally allows debugging output on the USB programming port, while the USB host uses the USB native port.
+// The programming port is connected to a hardware UART through a USB-Serial bridge (EDBG chip) on the Zero.
+// Boards that do not have the EDBG chip will have to connect a USB-TTL serial adapter to 'Serial' to get
+// the USB Host debugging output.
+#define SERIAL_PORT_MONITOR         Serial1
+// Serial has no physical pins broken out, so it's not listed as HARDWARE port
+#define SERIAL_PORT_HARDWARE        Serial1
+#define SERIAL_PORT_HARDWARE_OPEN   Serial1
 
-#define SERIAL_PORT_MONITOR        Serial
-// #define SERIAL_PORT_HARDWARE        Serial1
-// #define SERIAL_PORT_HARDWARE_OPEN   Serial1
-
+// The MT-D21E does not have the EDBG support chip, which provides a USB-UART bridge
+// accessible using Serial (the Arduino serial monitor is normally connected to this).
+// So, the USB virtual serial port (SerialUSB) must be used to communicate with the host.
+// Because most sketches use Serial to print to the monitor, it is aliased to SerialUSB.
+// Remember to use while(!Serial); to wait for a connection before Serial printing.
 #define Serial                      SerialUSB
-#endif /* _VARIANT_MINI_SAM */
 
+#endif /* _VARIANT_MINI_SAM */
